@@ -1,0 +1,12 @@
+.vs/
+*.vcxproj*
+*.sln
+*.user
+*.exe
+*.out
+*.obj
+*.o
+*.log
+*.tmp
+decimal-.c842849c/
+x64/
