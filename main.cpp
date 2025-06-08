@@ -26,8 +26,32 @@ int main()
 	int number{ readDecimal() };
 
 	std::vector<int> remainders{ getRemainders(number, v) };
-	for (int remainder : remainders) {
-		std::cout << remainder;
+
+	for (int i = size(remainders) - 1; i >= 0; i--) {
+		int num{ remainders[i] };
+
+		switch (num) {
+			case 10: 
+				std::cout << 'A';
+				break;
+			case 11:
+				std::cout << 'B';
+				break;
+			case 12:
+				std::cout << 'C';
+				break;
+			case 13:
+				std::cout << 'D';
+				break;
+			case 14:
+				std::cout << 'E';
+				break;
+			case 15:
+				std::cout << 'F';
+				break;
+			default:
+				std::cout << num;
+		}
 	}
 
 	return 0;
