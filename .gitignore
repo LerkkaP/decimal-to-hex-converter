@@ -10,3 +10,5 @@
 *.tmp
 decimal-.c842849c/
 x64/
+main
+.vscode/

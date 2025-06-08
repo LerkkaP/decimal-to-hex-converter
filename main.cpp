@@ -20,17 +20,12 @@ std::vector<int> getRemainders(int number, std::vector<int> &v)
 	}
 }
 
-int main()
+void mapRemaindersToHex(const std::vector<int> &remainders) 
 {
-	std::vector<int> v{};
-	int number{ readDecimal() };
 
-	std::vector<int> remainders{ getRemainders(number, v) };
-
-	for (int i = size(remainders) - 1; i >= 0; i--) {
+	for (int i = remainders.size() - 1; i >= 0; i--) {
 		int num{ remainders[i] };
-
-		switch (num) {
+				switch (num) {
 			case 10: 
 				std::cout << 'A';
 				break;
@@ -53,6 +48,15 @@ int main()
 				std::cout << num;
 		}
 	}
+}
 
+int main()
+{
+	std::vector<int> v{};
+	int number{ readDecimal() };
+
+	std::vector<int> remainders{ getRemainders(number, v) };
+
+	mapRemaindersToHex(remainders);
 	return 0;
 }
